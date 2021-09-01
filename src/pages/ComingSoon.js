@@ -9,7 +9,7 @@ import LogoKabinetKMTK from '../assets/images/logo-kabinet-kmtk.png'
 
 const Wrapper = styled.section`
     width: 100vw;
-    height: 100vh;
+    height: ${window.innerHeight}px;
     background: #FCF2E3;
     position: relative;
 `;
