@@ -6,10 +6,10 @@ import MonumenNasional from '../assets/images/monumen-nasional.svg'
 import LogoUGM from '../assets/images/logo-ugm.png'
 import LogoKMTK from '../assets/images/logo-kmtk.png'
 import LogoKabinetKMTK from '../assets/images/logo-kabinet-kmtk.png'
+import { use100vh } from 'react-div-100vh'
 
 const Wrapper = styled.section`
     width: 100vw;
-    height: ${window.innerHeight}px;
     background: #FCF2E3;
     position: relative;
 `;
@@ -151,39 +151,39 @@ const LogoStyled = styled.img`
 
 export default function ComingSoon() {
     return (
-        <Wrapper>
-            <BusinessLogo>
-                <LogoStyled src={LogoUGM} alt='Logo UGM' />
-                <LogoStyled src={LogoKMTK} alt='Logo KMTK' />
-                <LogoStyled src={LogoKabinetKMTK} alt='Logo Kabinet KMTK 2020/2021' />
-            </BusinessLogo>
-            <section>
-                {/* <img src='./img/Main.png' className='main-img' alt='Hero typography'></img> */}
-                <CircleDecorative />
-                <TypographyWrapper>
-                    <ComingSoonTypography>
-                        COMING SOON
-                    </ComingSoonTypography>
-                    <PemiluFormaturTypography>
-                        Pemilu Formatur
-                    </PemiluFormaturTypography>
-                    <KMTK2021Typography>
-                        KMTK 2021
-                    </KMTK2021Typography>
-                </TypographyWrapper>
-                {/* <img src='./img/Monumen Nasional.png' className='monumen' alt='Monumen Nasional'></img>
-                <img src='./img/Jam Gadang.png' className='jam-gadang' alt='Jam Gadang'></img> */}
-            </section>
-            <SocialMediaIcons>
-                <IconWrapper>
-                    <FontAwesomeIcon icon={['fab', 'instagram']} size="lg" />
-                </IconWrapper>
-                <IconWrapper>
-                    <FontAwesomeIcon icon={['fab', 'line']} size="lg" />
-                </IconWrapper>
-            </SocialMediaIcons>
-            <StyledMonumenNasional src={MonumenNasional} alt='Monumen Nasional'/>
-            <StyledJamGadang src={JamGadang} alt='Jam Gadang'/>
-        </Wrapper>
+            <Wrapper style={{height: use100vh()}}>
+                <BusinessLogo>
+                    <LogoStyled src={LogoUGM} alt='Logo UGM' />
+                    <LogoStyled src={LogoKMTK} alt='Logo KMTK' />
+                    <LogoStyled src={LogoKabinetKMTK} alt='Logo Kabinet KMTK 2020/2021' />
+                </BusinessLogo>
+                <section>
+                    {/* <img src='./img/Main.png' className='main-img' alt='Hero typography'></img> */}
+                    <CircleDecorative />
+                    <TypographyWrapper>
+                        <ComingSoonTypography>
+                            COMING SOON
+                        </ComingSoonTypography>
+                        <PemiluFormaturTypography>
+                            Pemilu Formatur
+                        </PemiluFormaturTypography>
+                        <KMTK2021Typography>
+                            KMTK 2021
+                        </KMTK2021Typography>
+                    </TypographyWrapper>
+                    {/* <img src='./img/Monumen Nasional.png' className='monumen' alt='Monumen Nasional'></img>
+                    <img src='./img/Jam Gadang.png' className='jam-gadang' alt='Jam Gadang'></img> */}
+                </section>
+                <SocialMediaIcons>
+                    <IconWrapper>
+                        <FontAwesomeIcon icon={['fab', 'instagram']} size="lg" />
+                    </IconWrapper>
+                    <IconWrapper>
+                        <FontAwesomeIcon icon={['fab', 'line']} size="lg" />
+                    </IconWrapper>
+                </SocialMediaIcons>
+                <StyledMonumenNasional src={MonumenNasional} alt='Monumen Nasional'/>
+                <StyledJamGadang src={JamGadang} alt='Jam Gadang'/>
+            </Wrapper>
     )
 }
