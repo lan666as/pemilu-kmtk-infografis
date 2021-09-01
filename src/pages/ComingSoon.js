@@ -26,8 +26,12 @@ const CircleDecorative = styled.div`
     transform: translate(-50%, -50%);
 
     @media screen and (max-width: 768px) {
-        width: 50vw;
-        height: 50vw;
+        width: 55vw;
+        height: 55vw;
+
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 `;
 
@@ -40,7 +44,8 @@ const ComingSoonTypography = styled.p`
     margin: 2.5vw 0 -10vw 0;
 
     @media screen and (max-width: 768px) {
-        font-size: 8.5vw;
+        margin: 2.5vw 0 -15.0vw 0;
+        font-size: 11.0vw;
     }
 `;
 
@@ -55,7 +60,8 @@ const PemiluFormaturTypography = styled.span`
     z-index: 1;
 
     @media screen and (max-width: 768px) {
-        font-size: 7.0vw;
+        font-size: 9.0vw;
+
     }
 `;
 
@@ -73,7 +79,7 @@ const KMTK2021Typography = styled.p`
     margin: 0;
     
     @media screen and (max-width: 768px) {
-        font-size: 3vw;
+        font-size: 3.0vw;
     }
 
     &:hover{
@@ -91,6 +97,12 @@ const TypographyWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media screen and (max-width: 768px) {
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 `;
 
 
