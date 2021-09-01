@@ -32,7 +32,7 @@ const CircleDecorative = styled.div`
 `;
 
 const ComingSoonTypography = styled.p`
-    font-family: 'Agrandir Grand Heavy';
+    font-family: 'Agrandir Grand Heavyy';
     font-size: 6.5vw;
     color: #ACA77E;
     text-align: center;
@@ -45,7 +45,7 @@ const ComingSoonTypography = styled.p`
 `;
 
 const PemiluFormaturTypography = styled.span` 
-    font-family: 'Amsterdam Four_ttf';
+    font-family: 'Amsterdam Four';
     font-size: 6.0vw;
     color: #BA3242;
     text-align: center;
