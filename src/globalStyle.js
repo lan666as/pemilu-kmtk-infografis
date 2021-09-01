@@ -24,6 +24,7 @@ const GlobalStyle = createGlobalStyle`
         --color-primary-dark: #F5DFBC;
         --color-text-primary: #68664c;
 
+        height: 100%;
         scroll-behavior: smooth;
     }
 
