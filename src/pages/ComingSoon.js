@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import JamGadang from '../assets/images/jam-gadang.svg'
@@ -7,12 +7,9 @@ import LogoUGM from '../assets/images/logo-ugm.png'
 import LogoKMTK from '../assets/images/logo-kmtk.png'
 import LogoKabinetKMTK from '../assets/images/logo-kabinet-kmtk.png'
 
-
 const Wrapper = styled.section`
     width: 100vw;
-    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-    height: calc(var(--vh, 1vh) * 100);
-
+    height: ${window.innerHeight}px;
     background: #FCF2E3;
     position: relative;
 `;
@@ -153,33 +150,6 @@ const LogoStyled = styled.img`
 
 
 export default function ComingSoon() {
-    function debounce(fn, ms) {
-        let timer
-        return _ => {
-          clearTimeout(timer)
-          timer = setTimeout(_ => {
-            timer = null
-            fn.apply(this, arguments)
-          }, ms)
-        };
-      }
-    const getHeight = () => window.innerHeight
-      || document.documentElement.clientHeight
-      || document.body.clientHeight;
-
-    useEffect(() => {
-        const debouncedHandleResize = debounce(function handleResize() {
-            document.documentElement.style.setProperty('--vh', `${getHeight() * 0.01}px`)
-        }, 100)
-    
-        window.addEventListener('resize', debouncedHandleResize)
-    
-        return _ => {
-            window.removeEventListener('resize', debouncedHandleResize)
-        }
-    });
-
-
     return (
         <Wrapper>
             <BusinessLogo>
