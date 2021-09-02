@@ -2,7 +2,7 @@ import React, {useEffect} from 'react'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { use100vh } from 'react-div-100vh'
-import { useSpring, animated, config  } from 'react-spring'
+import { useSpring, animated  } from 'react-spring'
 
 import JamGadang from '../assets/images/jam-gadang.svg'
 import MonumenNasional from '../assets/images/monumen-nasional.svg'
