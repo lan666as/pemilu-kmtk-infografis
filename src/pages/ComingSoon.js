@@ -36,7 +36,6 @@ const CircleDecorative = styled(animated.div)`
 
         top: 30%;
         left: 50%;
-        transform: translate(-50%, -50%);
     }
 `;
 
@@ -139,12 +138,13 @@ const SocialMediaIcons = styled.footer`
     align-items: center;
 `;
 
-const IconWrapper = styled.div`
+const IconWrapper = styled.a`
     margin: 1rem 0.75rem;
     color: #ACA77E;
 
     &:hover{
         color: #595741;
+        transform: translate(0, -0.1rem);
     }
 `;
 
@@ -194,8 +194,13 @@ const trans4 = (x, y) => `translate3d(calc(${x / 8}px - 50%),calc(${y / 8}px + 2
 export default function ComingSoon() {
     const [propsParallax, setParallax] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } }))
 
+    const handlePointerMove = (e) => {
+        e.preventDefault();
+        setParallax( {xy : calc(e.clientX, e.clientY)});
+    }
+
     return (
-            <Wrapper style={{height: use100vh()}} onMouseMove={({ clientX: x, clientY: y }) => setParallax({ xy: calc(x, y) })}>
+            <Wrapper style={{height: use100vh()}} onMouseMove={handlePointerMove}>
                 <BusinessLogo>
                     <LogoStyled src={LogoUGM} alt='Logo UGM' />
                     <LogoStyled src={LogoKMTK} alt='Logo KMTK' />
@@ -214,10 +219,13 @@ export default function ComingSoon() {
                     </KMTK2021Typography>
                 </HeroWrapper>
                 <SocialMediaIcons>
-                    <IconWrapper>
+                    <IconWrapper href='https://instagram.com/kmtkftugm' target='_blank' rel='noopener noreferer'>
                         <FontAwesomeIcon icon={['fab', 'instagram']} size="lg" />
                     </IconWrapper>
-                    <IconWrapper>
+                    <IconWrapper href='https://line.me/R/ti/p/@kmtkftugm' target='_blank' rel='noopener noreferer'>
+                        <FontAwesomeIcon icon={['fab', 'line']} size="lg" />
+                    </IconWrapper>
+                    <IconWrapper href='https://line.me/R/ti/p/@sdg0260c' target='_blank' rel='noopener noreferer'>
                         <FontAwesomeIcon icon={['fab', 'line']} size="lg" />
                     </IconWrapper>
                 </SocialMediaIcons>
