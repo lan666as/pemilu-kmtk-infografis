@@ -24,6 +24,7 @@ const CircleDecorative = styled(animated.div)`
     border-radius: 50%;
 
     will-change: transform;
+    transform-style: preserve-3d;
     z-index: 1;
     position: absolute;
     top: 50%;
@@ -47,6 +48,7 @@ const ComingSoonTypography = styled(animated.p)`
     inline-size: max-content;
 
     will-change: transform;
+    transform-style: preserve-3d;
     z-index: 2;
     position: absolute;
     top: 50%;
@@ -70,8 +72,10 @@ const PemiluFormaturTypography = styled(animated.p)`
     text-align: center;
     overflow: visible;
     inline-size: max-content;
+    pointer-events: none;
     
     will-change: transform;
+    transform-style: preserve-3d;
     z-index: 2;
     position: absolute;
     top: 50%;
@@ -96,6 +100,7 @@ const KMTK2021Typography = styled(animated.p)`
     border-radius: 5.0vw;
 
     will-change: transform;
+    transform-style: preserve-3d;
     z-index: 2;
     position: absolute;
     top: 50%;
@@ -186,10 +191,10 @@ const LogoStyled = styled.img`
 
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
-const trans1 = (x, y) => `translate3d(calc(${x / 16}px - 50%),calc(${y / 16}px - 50%),0)`
-const trans2 = (x, y) => `translate3d(calc(${x / 12}px - 50%),calc(${y / 12}px - 100%),0)`
-const trans3 = (x, y) => `translate3d(calc(${x / 10}px - 50%),calc(${y / 10}px - 60%),0)`
-const trans4 = (x, y) => `translate3d(calc(${x / 8}px - 50%),calc(${y / 8}px + 275%),0)`
+const trans1 = (x, y) => `translate3d(calc(${x / 16}px - 50%),calc(${y / 16}px - 50%),0) rotateY(${(x / window.innerWidth)*15}deg)`
+const trans2 = (x, y) => `translate3d(calc(${x / 12}px - 50%),calc(${y / 12}px - 100%),0) rotateY(${(x / window.innerWidth)*15}deg)`
+const trans3 = (x, y) => `translate3d(calc(${x / 10}px - 50%),calc(${y / 10}px - 60%),0) rotateY(${(x / window.innerWidth)*15}deg)`
+const trans4 = (x, y) => `translate3d(calc(${x / 8}px - 50%),calc(${y / 8}px + 275%),0) rotateY(${(x / window.innerWidth)*15}deg)`
 
 export default function ComingSoon() {
     const [propsParallax, setParallax] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } }))
