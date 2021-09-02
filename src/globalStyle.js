@@ -32,6 +32,17 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
 
+    // Debugging
+    
+    /* * { outline: 2px dotted red }
+    * * { outline: 2px dotted green }
+    * * * { outline: 2px dotted orange }
+    * * * * { outline: 2px dotted blue }
+    * * * * * { outline: 1px solid red }
+    * * * * * * { outline: 1px solid green }
+    * * * * * * * { outline: 1px solid orange }
+    * * * * * * * * { outline: 1px solid blue } */
+
     body {
         margin: 0;
         font-family: 'Montserrat', sans-serif;

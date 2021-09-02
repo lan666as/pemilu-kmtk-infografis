@@ -57,7 +57,7 @@ const ComingSoonTypography = styled(animated.p)`
     }
 
     &:hover{
-        color: rgba(255, 255, 255, 0);
+        color: transparent;
         -webkit-text-stroke: 2px #ACA77E;
         text-stroke: 2px #ACA77E;
     }
