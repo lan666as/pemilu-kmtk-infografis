@@ -60,8 +60,8 @@ const ComingSoonTypography = styled(animated.p)`
 
     &:hover{
         color: transparent;
-        -webkit-text-stroke: 2px #ACA77E;
-        text-stroke: 2px #ACA77E;
+        -webkit-text-stroke: 0.2vw #ACA77E;
+        text-stroke: 0.2vw #ACA77E;
     }
 `;
 
