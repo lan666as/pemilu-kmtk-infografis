@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { use100vh } from 'react-div-100vh'
@@ -58,7 +58,7 @@ const ComingSoonTypography = styled(animated.p)`
     }
 
     &:hover{
-        color: rgba(0, 0, 0, 0);
+        color: rgba(255, 255, 255, 0);
         -webkit-text-stroke: 2px #ACA77E;
         text-stroke: 2px #ACA77E;
     }
@@ -189,13 +189,10 @@ const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
 const trans1 = (x, y) => `translate3d(calc(${x / 16}px - 50%),calc(${y / 16}px - 50%),0)`
 const trans2 = (x, y) => `translate3d(calc(${x / 12}px - 50%),calc(${y / 12}px - 100%),0)`
 const trans3 = (x, y) => `translate3d(calc(${x / 10}px - 50%),calc(${y / 10}px - 60%),0)`
-const trans4 = (x, y) => `translate3d(calc(${x / 8}px - 50%),calc(${y / 8}px + 300%),0)`
+const trans4 = (x, y) => `translate3d(calc(${x / 8}px - 50%),calc(${y / 8}px + 275%),0)`
 
 export default function ComingSoon() {
     const [propsParallax, setParallax] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } }))
-    useEffect(() => {
-        console.log(propsParallax);
-      }, [propsParallax]);
 
     return (
             <Wrapper style={{height: use100vh()}} onMouseMove={({ clientX: x, clientY: y }) => setParallax({ xy: calc(x, y) })}>
@@ -205,7 +202,6 @@ export default function ComingSoon() {
                     <LogoStyled src={LogoKabinetKMTK} alt='Logo Kabinet KMTK 2020/2021' />
                 </BusinessLogo>
                 <HeroWrapper>
-                    {/* <img src='./img/Main.png' className='main-img' alt='Hero typography'></img> */}
                     <CircleDecorative style={{ transform: propsParallax.xy.to(trans1) }} />
                     <ComingSoonTypography style={{ transform: propsParallax.xy.to(trans2) }} >
                         COMING<br/>SOON
