@@ -1,12 +1,15 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { use100vh } from 'react-div-100vh'
+import { useSpring, animated, config  } from 'react-spring'
+
 import JamGadang from '../assets/images/jam-gadang.svg'
 import MonumenNasional from '../assets/images/monumen-nasional.svg'
 import LogoUGM from '../assets/images/logo-ugm.png'
 import LogoKMTK from '../assets/images/logo-kmtk.png'
 import LogoKabinetKMTK from '../assets/images/logo-kabinet-kmtk.png'
-import { use100vh } from 'react-div-100vh'
+
 
 const Wrapper = styled.section`
     width: 100vw;
@@ -14,16 +17,18 @@ const Wrapper = styled.section`
     position: relative;
 `;
 
-const CircleDecorative = styled.div`
+const CircleDecorative = styled(animated.div)`
     width: 35vw;
     height: 35vw;
     background: #F5DFBC;
     border-radius: 50%;
 
+    will-change: transform;
+    z-index: 1;
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 50%; 
+
 
     @media screen and (max-width: 768px) {
         width: 55vw;
@@ -35,48 +40,67 @@ const CircleDecorative = styled.div`
     }
 `;
 
-const ComingSoonTypography = styled.p`
+const ComingSoonTypography = styled(animated.p)`
     font-family: 'Agrandir Grand Heavyy';
     font-size: 6.5vw;
     color: #ACA77E;
     text-align: center;
+    inline-size: max-content;
 
-    margin: 2.5vw 0 -10vw 0;
+    will-change: transform;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%; 
 
     @media screen and (max-width: 768px) {
-        margin: 2.5vw 0 -15.0vw 0;
         font-size: 11.0vw;
+    }
+
+    &:hover{
+        color: rgba(0, 0, 0, 0);
+        -webkit-text-stroke: 2px #ACA77E;
+        text-stroke: 2px #ACA77E;
     }
 `;
 
-const PemiluFormaturTypography = styled.span` 
+const PemiluFormaturTypography = styled(animated.p)` 
     font-family: 'Amsterdam Four';
     font-size: 6.0vw;
     color: #BA3242;
     text-align: center;
-
-    display: inline;
-    margin: 0;
-    z-index: 1;
+    overflow: visible;
+    inline-size: max-content;
+    
+    will-change: transform;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%; 
 
     @media screen and (max-width: 768px) {
-        font-size: 9.0vw;
+        font-size: 10.0vw;
 
     }
 `;
 
-const KMTK2021Typography = styled.p` 
+const KMTK2021Typography = styled(animated.p)` 
     font-family: 'Montserrat';
     font-size: 2.0vw;
     font-weight: 600;
     color: #FCF2E3;
     text-align: center;
+    inline-size: max-content;
 
     background-color: #837F5F;
     padding:  0.5vw 1.5vw;
     border-radius: 5.0vw;
 
-    margin: 0;
+    will-change: transform;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%; 
     
     @media screen and (max-width: 768px) {
         font-size: 3.0vw;
@@ -87,16 +111,16 @@ const KMTK2021Typography = styled.p`
     }
 `;
 
-const TypographyWrapper = styled.div`
+const HeroWrapper = styled.div`
     margin: 0;
-    position: absolute;
+    position: relative;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /* left: 50%; */
+    /* transform: translate(0, -50%); */
 
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
 
     @media screen and (max-width: 768px) {
         top: 30%;
@@ -161,31 +185,38 @@ const LogoStyled = styled.img`
 `;
 
 
+const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
+const trans1 = (x, y) => `translate3d(calc(${x / 16}px - 50%),calc(${y / 16}px - 50%),0)`
+const trans2 = (x, y) => `translate3d(calc(${x / 12}px - 50%),calc(${y / 12}px - 100%),0)`
+const trans3 = (x, y) => `translate3d(calc(${x / 10}px - 50%),calc(${y / 10}px - 60%),0)`
+const trans4 = (x, y) => `translate3d(calc(${x / 8}px - 50%),calc(${y / 8}px + 300%),0)`
+
 export default function ComingSoon() {
+    const [propsParallax, setParallax] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } }))
+    useEffect(() => {
+        console.log(propsParallax);
+      }, [propsParallax]);
+
     return (
-            <Wrapper style={{height: use100vh()}}>
+            <Wrapper style={{height: use100vh()}} onMouseMove={({ clientX: x, clientY: y }) => setParallax({ xy: calc(x, y) })}>
                 <BusinessLogo>
                     <LogoStyled src={LogoUGM} alt='Logo UGM' />
                     <LogoStyled src={LogoKMTK} alt='Logo KMTK' />
                     <LogoStyled src={LogoKabinetKMTK} alt='Logo Kabinet KMTK 2020/2021' />
                 </BusinessLogo>
-                <section>
+                <HeroWrapper>
                     {/* <img src='./img/Main.png' className='main-img' alt='Hero typography'></img> */}
-                    <CircleDecorative />
-                    <TypographyWrapper>
-                        <ComingSoonTypography>
-                            COMING SOON
-                        </ComingSoonTypography>
-                        <PemiluFormaturTypography>
-                            Pemilu Formatur
-                        </PemiluFormaturTypography>
-                        <KMTK2021Typography>
-                            KMTK 2021
-                        </KMTK2021Typography>
-                    </TypographyWrapper>
-                    {/* <img src='./img/Monumen Nasional.png' className='monumen' alt='Monumen Nasional'></img>
-                    <img src='./img/Jam Gadang.png' className='jam-gadang' alt='Jam Gadang'></img> */}
-                </section>
+                    <CircleDecorative style={{ transform: propsParallax.xy.to(trans1) }} />
+                    <ComingSoonTypography style={{ transform: propsParallax.xy.to(trans2) }} >
+                        COMING<br/>SOON
+                    </ComingSoonTypography>
+                    <PemiluFormaturTypography style={{ transform: propsParallax.xy.to(trans3) }} >
+                        Pemilu Formatur
+                    </PemiluFormaturTypography>
+                    <KMTK2021Typography style={{ transform: propsParallax.xy.to(trans4) }}>
+                        KMTK 2021
+                    </KMTK2021Typography>
+                </HeroWrapper>
                 <SocialMediaIcons>
                     <IconWrapper>
                         <FontAwesomeIcon icon={['fab', 'instagram']} size="lg" />
