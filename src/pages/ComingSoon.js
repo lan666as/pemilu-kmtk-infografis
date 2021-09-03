@@ -32,18 +32,6 @@ const trans2 = (x, y) => `translate3d(calc(${x / 12}px - 50%),calc(${y / 12}px -
 const trans3 = (x, y) => `translate3d(calc(${x / 10}px - 50%),calc(${y / 10}px - 60%),0) rotateY(${(x / window.innerWidth)*15}deg)`
 const trans4 = (x, y) => `translate3d(calc(${x / 8}px - 50%),calc(${y / 8}px + 275%),0) rotateY(${(x / window.innerWidth)*15}deg)`
 
-const CharComingSoon = ({children, image}) => {
-    const [hovered, setHovered] = useSpring(() => ({ opacity: 0.0, config: { mass: 10, tension: 550, friction: 140 } }));
-    return (
-        <>
-            <HoverImage src={image} style={{opacity: hovered.opacity}} /> 
-            <ComingSoonTypography onPointerOver={() => setHovered({ opacity: 0.5 })} onPointerOut={() => setHovered({ opacity: 0.0 })}>
-                {children}
-            </ComingSoonTypography>
-        </>
-    )
-}
-
 const COMING_LIST = ["C", "O", "M", "I", "N", "G", "S", "O", "O", "N"]
 
 export default function ComingSoon() {
