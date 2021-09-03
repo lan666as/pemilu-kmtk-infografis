@@ -59,7 +59,7 @@ export const ComingSoonWrapper = styled(animated.div)`
 `;
 
 export const ComingSoonTypography = styled(animated.span)`
-
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.15));
 `;
 
 export const PemiluFormaturTypography = styled(animated.p)` 
