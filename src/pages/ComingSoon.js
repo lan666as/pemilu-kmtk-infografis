@@ -59,10 +59,10 @@ export default function ComingSoon() {
                     <CircleDecorative style={{ transform: propsParallax.xy.to(trans1) }}>
                         {
                             COMING_LIST.map((c,index) => (
-                                <HoverImage key={index} src={process.env.PUBLIC_URL + `/img/hero/hero-${index+1}.png`} style={{opacity: (hovered === index ? 0.2 : 0.0)}} /> 
+                                <HoverImage key={index} src={process.env.PUBLIC_URL + `/img/hero/hero-${index+1}.png`} style={{opacity: (hovered === index ? 0.25 : 0.0)}} /> 
                             ))
                         }
-                        <HoverImage key={11} src={process.env.PUBLIC_URL + `/img/hero/hero-main.png`} style={{opacity: (hovered === "kmtk" ? 0.15 : 0.0)}} /> 
+                        <HoverImage key={11} src={process.env.PUBLIC_URL + `/img/hero/hero-main.png`} style={{opacity: (hovered === "kmtk" ? 0.2 : 0.0)}} /> 
                     </CircleDecorative>
                     <ComingSoonWrapper style={{ transform: propsParallax.xy.to(trans2) }} >
                         {

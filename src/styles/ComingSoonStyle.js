@@ -36,7 +36,7 @@ export const CircleDecorative = styled(animated.div)`
 export const ComingSoonWrapper = styled(animated.div)`
     font-family: 'Agrandir Grand Heavyy';
     font-size: 6.5vw;
-    color: #ACA77E;
+    color: #837F5F;
     text-align: center;
     inline-size: max-content;
 
@@ -53,13 +53,19 @@ export const ComingSoonWrapper = styled(animated.div)`
 
     &:hover{
         color: transparent;
-        -webkit-text-stroke: 0.25vw #ACA77E;
-        text-stroke: 0.25vw #ACA77E;
+        -webkit-text-stroke: 0.25vw #837F5F;
+        text-stroke: 0.25vw #837F5F;
     }
 `;
 
 export const ComingSoonTypography = styled(animated.span)`
     filter: drop-shadow(0 0 5px rgba(0,0,0,0.15));
+    
+    &:hover{
+        color: transparent;
+        -webkit-text-stroke: 0.25vw #FF7F5F;
+        text-stroke: 0.25vw #FF7F5F;
+    }
 `;
 
 export const PemiluFormaturTypography = styled(animated.p)` 
@@ -192,6 +198,7 @@ export const HoverImage = styled(animated.img)`
     opacity: 0.5;
     min-height: 35vw;
     min-width: 35vw;
+    object-fit: cover;
 
     will-change: transform;
     z-index: 1;
