@@ -55,6 +55,7 @@ export const ComingSoonWrapper = styled(animated.div)`
         color: transparent;
         -webkit-text-stroke: 0.25vw #837F5F;
         text-stroke: 0.25vw #837F5F;
+        mix-blend-mode: multiply;
     }
 `;
 
