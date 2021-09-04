@@ -68,3 +68,20 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+
+### Docker
+Build image
+`docker build .`
+
+Get image name
+`docker images`
+
+Start container
+`docker run --rm -it -p 3000:3000`
+
+Start server in container
+`yarn start`
