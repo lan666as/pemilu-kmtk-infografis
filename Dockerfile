@@ -1,7 +1,9 @@
-FROM node:current-alpine3.14
+FROM alpine:latest
 # RUN apk add --no-cache mysql-client
 WORKDIR /usr/src/app
 COPY package.json yarn.lock ./
+RUN apk add yarn
+
 RUN yarn
 
 EXPOSE 3000
