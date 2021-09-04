@@ -53,8 +53,8 @@ export const ComingSoonWrapper = styled(animated.div)`
 
     &:hover{
         color: transparent;
-        -webkit-text-stroke: 0.2vw #ACA77E;
-        text-stroke: 0.2vw #ACA77E;
+        -webkit-text-stroke: 0.25vw #ACA77E;
+        text-stroke: 0.25vw #ACA77E;
     }
 `;
 
@@ -95,6 +95,7 @@ export const KMTK2021Typography = styled(animated.p)`
     background-color: #837F5F;
     padding:  0.5vw 1.5vw;
     border-radius: 5.0vw;
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.15));
 
     will-change: transform;
     transform-style: preserve-3d;
@@ -202,8 +203,5 @@ export const HoverImage = styled(animated.img)`
     @media screen and (max-width: 768px) {
         width: 55vw;
         height: 55vw;
-
-        top: 30%;
-        left: 50%;
     }
 `;
