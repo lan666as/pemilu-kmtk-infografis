@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { animated  } from 'react-spring'
 
 
-export const Wrapper = styled.section`
+export const Wrapper = styled.main`
     width: 100vw;
     background: #FCF2E3;
     position: relative;
@@ -192,6 +192,7 @@ export const BusinessLogo = styled.header`
 export const LogoStyled = styled.img`
     margin: 0.5em;
     height: 2.5em;
+    width: 2.5em;
 `;
 
 
