@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { use100vh } from 'react-div-100vh'
-import { useSpring  } from 'react-spring'
+import { useSpring } from 'react-spring'
 
 import {
     Wrapper,
@@ -38,6 +38,73 @@ export default function ComingSoon() {
     const [propsParallax, setParallax] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } }))
     const [hovered, setHovered] = useState(-1);
 
+    const heroTransition = useSpring({
+        scale: 1,
+        opacity: 1,
+        from: {
+            scale: 1.5,
+            opacity: 0.5
+        }
+    })
+    const monumenTransition = useSpring({
+        transform: 'translateX(0%)',
+        scale: 1,
+        from: {
+            transform: 'translateX(-100%)',
+            scale: 2
+        },
+        config: { duration: 500 },
+    })
+    const jamTransition = useSpring({
+        transform: 'translateX(0%)',
+        from: {
+            transform: 'translateX(200%)'
+        },
+        config: { duration: 500 },
+    })
+    const logoTransition1 = useSpring({
+        transform: 'translateY(0%)',
+        from: {
+            transform: 'translateY(-100%)'
+        },
+        config: { duration: 250 },
+    })
+    const logoTransition2 = useSpring({
+        transform: 'translateY(0%)',
+        from: {
+            transform: 'translateY(-100%)'
+        },
+        config: { duration: 500 },
+    })
+    const logoTransition3 = useSpring({
+        transform: 'translateY(0%)',
+        from: {
+            transform: 'translateY(-100%)'
+        },
+        config: { duration: 750 },
+    })
+    const iconTransition1 = useSpring({
+        transform: 'translateY(0%)',
+        from: {
+            transform: 'translateY(200%)'
+        },
+        config: { duration: 250 },
+    })
+    const iconTransition2 = useSpring({
+        transform: 'translateY(0%)',
+        from: {
+            transform: 'translateY(200%)'
+        },
+        config: { duration: 500 },
+    })
+    const iconTransition3 = useSpring({
+        transform: 'translateY(0%)',
+        from: {
+            transform: 'translateY(200%)'
+        },
+        config: { duration: 750 },
+    })
+
     const handlePointerMove = (e) => {
         e.preventDefault();
         setParallax( {xy : calc(e.clientX, e.clientY)});
@@ -51,11 +118,11 @@ export default function ComingSoon() {
     return (
             <Wrapper style={{height: use100vh()}} onMouseMove={handlePointerMove}>
                 <BusinessLogo>
-                    <LogoStyled src={LogoUGM} alt='Logo UGM' />
-                    <LogoStyled src={LogoKMTK} alt='Logo KMTK' />
-                    <LogoStyled src={LogoKabinetKMTK} alt='Logo Kabinet KMTK 2020/2021' />
+                    <LogoStyled style={logoTransition1} src={LogoUGM} alt='Logo UGM' />
+                    <LogoStyled style={logoTransition2} src={LogoKMTK} alt='Logo KMTK' />
+                    <LogoStyled style={logoTransition3} src={LogoKabinetKMTK} alt='Logo Kabinet KMTK 2020/2021' />
                 </BusinessLogo>
-                <HeroWrapper>
+                <HeroWrapper style={heroTransition}>
                     <CircleDecorative style={{ transform: propsParallax.xy.to(trans1) }}>
                         {
                             COMING_LIST.map((c,index) => (
@@ -86,18 +153,18 @@ export default function ComingSoon() {
                     </KMTK2021Typography>
                 </HeroWrapper>
                 <SocialMediaIcons>
-                    <IconWrapper href='https://instagram.com/kmtkftugm' target='_blank' rel='noopener noreferer'>
+                    <IconWrapper style={iconTransition1} href='https://instagram.com/kmtkftugm' target='_blank' rel='noopener noreferer'>
                         <FontAwesomeIcon icon={['fab', 'instagram']} size="lg" />
                     </IconWrapper>
-                    <IconWrapper href='https://line.me/R/ti/p/@kmtkftugm' target='_blank' rel='noopener noreferer'>
+                    <IconWrapper style={iconTransition2} href='https://line.me/R/ti/p/@kmtkftugm' target='_blank' rel='noopener noreferer'>
                         <FontAwesomeIcon icon={['fab', 'line']} size="lg" />
                     </IconWrapper>
-                    <IconWrapper href='https://line.me/R/ti/p/@sdg0260c' target='_blank' rel='noopener noreferer'>
+                    <IconWrapper style={iconTransition3} href='https://line.me/R/ti/p/@sdg0260c' target='_blank' rel='noopener noreferer'>
                         <FontAwesomeIcon icon={['fab', 'line']} size="lg" />
                     </IconWrapper>
                 </SocialMediaIcons>
-                <StyledMonumenNasional src={MonumenNasional} alt='Monumen Nasional'/>
-                <StyledJamGadang src={JamGadang} alt='Jam Gadang'/>
+                <StyledMonumenNasional style={monumenTransition} src={MonumenNasional} alt='Monumen Nasional'/>
+                <StyledJamGadang style={jamTransition} src={JamGadang} alt='Jam Gadang'/>
             </Wrapper>
     )
 }
