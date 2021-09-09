@@ -120,7 +120,7 @@ export const KMTK2021Typography = styled(animated.p)`
     }
 `;
 
-export const HeroWrapper = styled.div`
+export const HeroWrapper = styled(animated.div)`
     margin: 0;
     position: relative;
     top: 50%;
@@ -148,7 +148,7 @@ export const SocialMediaIcons = styled.footer`
     align-items: center;
 `;
 
-export const IconWrapper = styled.a`
+export const IconWrapper = styled(animated.footer)`
     margin: 1rem 0.75rem;
     color: #ACA77E;
 
@@ -158,7 +158,7 @@ export const IconWrapper = styled.a`
     }
 `;
 
-export const StyledJamGadang = styled.img`
+export const StyledJamGadang = styled(animated.img)`
     position: absolute;
     right: 0;
     bottom: 0;
@@ -169,7 +169,7 @@ export const StyledJamGadang = styled.img`
     }
 `;
 
-export const StyledMonumenNasional = styled.img`
+export const StyledMonumenNasional = styled(animated.img)`
     position: absolute;
     left: -7.5vh;
     bottom: 0;
@@ -189,7 +189,7 @@ export const BusinessLogo = styled.header`
     align-items: center;
 `;
 
-export const LogoStyled = styled.img`
+export const LogoStyled = styled(animated.img)`
     margin: 0.5em;
     height: 2.5em;
     width: 2.5em;
