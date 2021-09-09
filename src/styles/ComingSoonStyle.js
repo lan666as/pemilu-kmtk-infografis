@@ -148,7 +148,7 @@ export const SocialMediaIcons = styled.footer`
     align-items: center;
 `;
 
-export const IconWrapper = styled(animated.footer)`
+export const IconWrapper = styled(animated.a)`
     margin: 1rem 0.75rem;
     color: #ACA77E;
 
