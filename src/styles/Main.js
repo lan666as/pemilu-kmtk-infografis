@@ -3,9 +3,11 @@ import { animated  } from 'react-spring'
 
 
 export const Wrapper = styled.main`
-    width: 100vw;
+    width: 100%;
     background: #FCF2E3;
-    position: relative;
+    position: relative;    
+    border-bottom-left-radius: 100% 4rem;
+    border-bottom-right-radius: 100% 4rem;
 `;
 
 export const CircleDecorative = styled(animated.div)`
@@ -120,7 +122,7 @@ export const KMTK2021Typography = styled(animated.p)`
     }
 `;
 
-export const HeroWrapper = styled(animated.div)`
+export const HeroWrapper = styled.div`
     margin: 0;
     position: relative;
     top: 50%;
@@ -138,62 +140,6 @@ export const HeroWrapper = styled(animated.div)`
     }
 `;
 
-
-export const SocialMediaIcons = styled.footer` 
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    display: flex;
-    align-items: center;
-`;
-
-export const IconWrapper = styled(animated.a)`
-    margin: 1rem 0.75rem;
-    color: #ACA77E;
-
-    &:hover{
-        color: #595741;
-        transform: translate(0, -0.1rem);
-    }
-`;
-
-export const StyledJamGadang = styled(animated.img)`
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    height: 70vh;
-
-    @media screen and (max-width: 768px) {
-        height: 45vh;
-    }
-`;
-
-export const StyledMonumenNasional = styled(animated.img)`
-    position: absolute;
-    left: -7.5vh;
-    bottom: 0;
-    height: 70vh;
-
-    @media screen and (max-width: 768px) {
-        height: 45vh;
-    }
-`;
-
-export const BusinessLogo = styled.header` 
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    display: flex;
-    align-items: center;
-`;
-
-export const LogoStyled = styled(animated.img)`
-    margin: 0.5em;
-    height: 2.5em;
-    width: 2.5em;
-`;
 
 
 export const HoverImage = styled(animated.img)`

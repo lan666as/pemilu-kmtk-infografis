@@ -1,11 +1,14 @@
-import React from "react";
+import React from 'react'
+import About from './About'
+import Main from './Main'
+import TataCara from './TataCara'
 
-function Home() {
-  return (
-    <div>
-      <h1>Home</h1>
-    </div>
-  );
+export default function Home() {
+    return (
+        <div>
+            <Main />
+            <About />
+            <TataCara />
+        </div>
+    )
 }
-
-export default Home;

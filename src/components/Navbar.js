@@ -1,57 +1,21 @@
-import React from "react";
-import { Link, withRouter } from "react-router-dom";
-import "./Navbar.css";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import LogoKMTK from '../assets/images/logo-kmtk.png'
+import logoKabinet from '../assets/images/logo-kabinet-kmtk.png'
+import '../styles/Navbar.css';
 
-function Navbar(props) {
-  return (
-    <div className="nav">
-      <input type="checkbox" id="nav-check" />
-      <div className="nav-header">
-        <div className="nav-title">
-          <Link className="nav-text" to="/">
-            KPU KMTK 2021
-          </Link>
+export default function Navbar() {
+    return (
+        <div className='nav-container'>
+            <div className='nav-logo'>
+                <img className='logo' src={LogoKMTK} alt='logo kmtk'></img>
+                <img className='logo' src={logoKabinet} alt='logo kabinet'></img>
+            </div>
+            <div className='nav-menu'>
+                <Link className='menu' to="/">Home</Link>
+                <Link className='menu' to="/">Calon</Link>
+                <Link className='menu' to="/">Tata Cara</Link>
+            </div>
         </div>
-      </div>
-      <div className="nav-btn">
-        <label for="nav-check">
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-      </div>
-
-      <div className="nav-links">
-        <a
-          class={`nav-links-box ${
-            props.location.pathname === "/calon" ? "active" : ""
-          }`}
-        >
-          <Link className="nav-text" to="/calon">
-            Calon
-          </Link>
-        </a>
-        <a
-          class={`nav-links-box ${
-            props.location.pathname === "/informasi" ? "active" : ""
-          }`}
-        >
-          <Link className="nav-text" to="/informasi">
-            Informasi
-          </Link>
-        </a>
-        <a
-          class={`nav-links-box ${
-            props.location.pathname === "/tatacara" ? "active" : ""
-          }`}
-        >
-          <Link className="nav-text" to="/tatacara">
-            Tatacara
-          </Link>
-        </a>
-      </div>
-    </div>
-  );
+    )
 }
-
-export default withRouter(Navbar);

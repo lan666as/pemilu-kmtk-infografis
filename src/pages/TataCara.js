@@ -1,11 +1,14 @@
-import React from "react";
+import React from 'react'
+import '../styles/TataCara.css'
+import YoutubeEmbed from '../components/YoutubeEmbed';
 
-function TataCara() {
-  return (
-    <div>
-      <h1>Tata Cara</h1>
-    </div>
-  );
+export default function TataCara() {
+    return (
+        <div className='tatacara-container'>
+            <h1>TATA CARA</h1> 
+            <div className='youtube-wrapper'>
+                <YoutubeEmbed embedId='8GAEi67UrVw'/>
+            </div>
+        </div>
+    )
 }
-
-export default TataCara;

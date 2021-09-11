@@ -1,30 +1,30 @@
+import GlobalStyle from './globalStyle';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import "./App.css";
-// import GlobalStyle from "./globalStyle";
-import ComingSoon from "./pages/ComingSoon";
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Calon from "./pages/Calon";
-import Informasi from "./pages/Informasi";
-import TataCara from "./pages/TataCara";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab } from "@fortawesome/free-brands-svg-icons";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import ReactGA from 'react-ga';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Calon from './pages/Calon';
 
-library.add(fab);
+const TRACKING_ID = "UA-174571616-2"; // YOUR_OWN_TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
+
+library.add(fab)
 
 function App() {
   return (
     <Router>
+      <GlobalStyle />
       <Navbar />
       <Switch>
         <Route path="/" exact component={() => <Home />} />
-        <Route path="/calon" exact component={() => <Calon />} />
-        <Route path="/informasi" exact component={() => <Informasi />} />
-        <Route path="/tatacara" exact component={() => <TataCara />} />
+        <Route path="/calon1" exact component={() => <Calon />} />
+        <Route path="/calon2" exact component={() => <Calon />} />
+        <Route path="/calon3" exact component={() => <Calon />} />
+        <Route path="/calon4" exact component={() => <Calon />} />
       </Switch>
     </Router>
-    // <GlobalStyle />
-    // <ComingSoon />
   );
 }
 

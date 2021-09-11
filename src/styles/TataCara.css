@@ -1,0 +1,26 @@
+.tatacara-container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tatacara-container h1{
+    display: flex;
+    justify-content: center;
+    background: #ffffff;
+    color: #837F5F;
+    font-family: Agrandir Grand Heavyy;
+    font-size: 2rem;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.youtube-wrapper{
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*F4D19B*/
