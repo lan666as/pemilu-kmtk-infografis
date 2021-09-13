@@ -16,40 +16,68 @@ export default function About() {
       </svg>
       <div className="container-fluid">
         <div className="calon-text text-center">CALON KETUA</div>
-        <div className="row justify-content-center">
-          <div className="col-lg-3 col-md-6">
+        <div className="row box justify-content-center">
+          <div class="col-lg-3 col-md-6 card mx-5 my-5">
             <Link to="/calon1">
-              <div className="px-4 pt-4 pb-5 m-2 text-center calon-card">
-                <span className="calon-card-text">Calon X</span>
-
-                <img class="img-fluid" src={CalonIMG} alt="" />
+              <div class="imgBx">
+                <img
+                  src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                  alt="images"
+                />
+              </div>
+              <div class="details">
+                <h2>Calon 1</h2>
+                <span>
+                  <h2>Kontolodon</h2>
+                </span>
               </div>
             </Link>
           </div>
-          <div className="col-lg-3 col-md-6 mb-2">
+          <div class="col-lg-3 col-md-6 card mx-5 my-5">
             <Link to="/calon2">
-              <div className="px-4 pt-4 pb-5 m-2 text-center calon-card">
-                <span className="calon-card-text">Calon X</span>
-
-                <img class="img-fluid" src={CalonIMG} alt="" />
+              <div class="imgBx">
+                <img
+                  src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                  alt="images"
+                />
+              </div>
+              <div class="details">
+                <h2>Calon 1</h2>
+                <span>
+                  <h2>Kontolodon</h2>
+                </span>
               </div>
             </Link>
           </div>
-          <div className="col-lg-3 col-md-6 mb-2">
-            <Link to="/calon3">
-              <div className="px-4 pt-4 pb-5 m-2 text-center calon-card">
-                <span className="calon-card-text">Calon X</span>
-
-                <img class="img-fluid" src={CalonIMG} alt="" />
+          <div class="col-lg-3 col-md-6 card mx-5 my-5">
+            <Link to="/calon2">
+              <div class="imgBx">
+                <img
+                  src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                  alt="images"
+                />
+              </div>
+              <div class="details">
+                <h2>Calon 1</h2>
+                <span>
+                  <h2>Kontolodon</h2>
+                </span>
               </div>
             </Link>
           </div>
-          <div className="col-lg-3 col-md-6 mb-2">
-            <Link to="/calon4">
-              <div className="px-4 pt-4 pb-5 m-2 text-center calon-card">
-                <span className="calon-card-text">Calon X</span>
-
-                <img class="img-fluid calon-img" src={CalonIMG} alt="" />
+          <div class="col-lg-3 col-md-6 card mx-5 my-5">
+            <Link to="/calon2">
+              <div class="imgBx">
+                <img
+                  src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                  alt="images"
+                />
+              </div>
+              <div class="details">
+                <h2>Calon 1</h2>
+                <span>
+                  <h2>Kontolodon</h2>
+                </span>
               </div>
             </Link>
           </div>
