@@ -3,6 +3,20 @@
   flex-direction: column;
   align-items: center;
   background-color: #fcf2e3;
+  padding-bottom: 100px;
+}
+
+.tatacara-container h1 {
+  color: #837f5f;
+  font-family: "Agrandir Grand Heavyy";
+  font-size: 2rem;
+}
+
+.youtube-wrapper {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* .tatacara-container h1 {

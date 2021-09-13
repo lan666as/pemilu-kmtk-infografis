@@ -4,7 +4,6 @@ import { animated } from "react-spring";
 export const Wrapper = styled.main`
   width: 100%;
   background: #fcf2e3;
-  position: relative;
 `;
 
 export const CircleDecorative = styled(animated.div)`

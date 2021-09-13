@@ -6,11 +6,9 @@ export default function TataCara() {
   return (
     <div className="tatacara-container">
       <h1>TATA CARA</h1>
-      <p>Asu</p>
-      <p>Asu</p>
-      {/* <div className='youtube-wrapper'>
-                <YoutubeEmbed embedId='8GAEi67UrVw'/>
-            </div> */}
+      <div className="youtube-wrapper mt-4">
+        <YoutubeEmbed embedId="8GAEi67UrVw" />
+      </div>
     </div>
   );
 }
