@@ -6,6 +6,7 @@ export const Wrapper = styled.main`
     width: 100vw;
     background: #FCF2E3;
     position: relative;
+    overflow: hidden;
 `;
 
 export const CircleDecorative = styled(animated.div)`
@@ -127,14 +128,13 @@ export const HeroWrapper = styled(animated.div)`
     /* left: 50%; */
     /* transform: translate(0, -50%); */
 
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
 
     @media screen and (max-width: 768px) {
         top: 30%;
-        left: 50%;
         transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 `;
 
