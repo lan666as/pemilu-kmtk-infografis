@@ -6,6 +6,7 @@ import ReactGA from "react-ga";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Calon from "./pages/Calon";
+import Footer from "./components/Footer"
 
 const TRACKING_ID = "UA-174571616-2"; // YOUR_OWN_TRACKING_ID
 ReactGA.initialize(TRACKING_ID);
@@ -24,6 +25,7 @@ function App() {
         <Route path="/calon3" exact component={() => <Calon />} />
         <Route path="/calon4" exact component={() => <Calon />} />
       </Switch>
+      <Footer />
     </Router>
   );
 }

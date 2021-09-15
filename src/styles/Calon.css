@@ -4,7 +4,16 @@
     margin: 0 15%;
 }
 
-h2{
+.detail-header{
+    display: flex;
+    align-items: center;
+}
+
+.calon-photo{
+    width: 150px;
+}
+
+h1, h2{
     display: flex;
     justify-content: center;
     color: #837F5F;
@@ -12,4 +21,13 @@ h2{
     font-size: 2rem;
     margin: 0;
     margin-bottom: 20px;
+}
+
+h1{
+    color: #000000;
+    font-size: 2.5rem;
+}
+
+.calon-video{
+    margin: 50px 0;
 }

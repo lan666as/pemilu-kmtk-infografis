@@ -6,8 +6,11 @@ export default function DetailCalon() {
     return (
         <div className='detail-container'>
             <div className='detail-header'>
-                <div className='calon-photo'></div>
+                <img className='calon-photo' src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                  alt="images"></img>
+                <div className='calon-info'></div>
                 <h1 className='calon-name'>Ahmad Zidan</h1>
+
             </div>
             <div className='calon-video'>
                 <YoutubeEmbed embedId='8GAEi67UrVw'/>

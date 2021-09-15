@@ -1,0 +1,22 @@
+.footer-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #414045;
+    height: 100px;
+    color: #ffffff;
+}
+
+.image-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 30px;
+    width: 180px;
+    margin-left: 50px;
+}
+
+.official-account{
+    margin-right: 50px;
+}
