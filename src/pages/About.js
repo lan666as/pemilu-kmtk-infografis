@@ -16,8 +16,8 @@ export default function About() {
       <div className="container-fluid">
         <div className="calon-text text-center">CALON KETUA</div>
         <div className="row box justify-content-center">
-          <div className="col-lg-3 col-md-6 card mx-5 my-5">
-            <Link to="/calon1">
+          <div className="col-lg-4 col-md-6 p-3">
+            <Link className="card" to="/calon1">
               <div className="imgBx">
                 <img
                   src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
@@ -32,8 +32,8 @@ export default function About() {
               </div>
             </Link>
           </div>
-          <div className="col-lg-3 col-md-6 card mx-5 my-5">
-            <Link to="/calon2">
+          <div className="col-lg-4 col-md-6 p-3">
+            <Link className="card" to="/calon1">
               <div className="imgBx">
                 <img
                   src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
@@ -48,8 +48,8 @@ export default function About() {
               </div>
             </Link>
           </div>
-          <div className="col-lg-3 col-md-6 card mx-5 my-5">
-            <Link to="/calon2">
+          <div className="col-lg-4 col-md-6 p-3">
+            <Link className="card" to="/calon1">
               <div className="imgBx">
                 <img
                   src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
@@ -64,8 +64,8 @@ export default function About() {
               </div>
             </Link>
           </div>
-          <div className="col-lg-3 col-md-6 card mx-5 my-5">
-            <Link to="/calon2">
+          <div className="col-lg-4 col-md-6 p-3">
+            <Link className="card" to="/calon1">
               <div className="imgBx">
                 <img
                   src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
@@ -80,8 +80,8 @@ export default function About() {
               </div>
             </Link>
           </div>
-          <div className="col-lg-3 col-md-6 card mx-5 my-5">
-            <Link to="/calon2">
+          <div className="col-lg-4 col-md-6 p-3">
+            <Link className="card" to="/calon1">
               <div className="imgBx">
                 <img
                   src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
