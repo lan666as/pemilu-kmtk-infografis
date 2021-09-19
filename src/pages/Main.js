@@ -52,7 +52,7 @@ export default function ComingSoon() {
   };
 
   return (
-    <div className="main-containter">
+    <div className="main-containter" id="home">
       <Wrapper style={{ height: use100vh() }} onMouseMove={handlePointerMove}>
         <HeroWrapper>
           <CircleDecorative style={{ transform: propsParallax.xy.to(trans1) }}>

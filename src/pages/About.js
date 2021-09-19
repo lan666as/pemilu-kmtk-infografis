@@ -5,7 +5,7 @@ import "../styles/About.css";
 
 export default function About() {
   return (
-    <div className="about-container">
+    <div className="about-container" id="calon">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#FCF2E3"
@@ -18,6 +18,22 @@ export default function About() {
         <div className="row box justify-content-center">
           <div className="col-lg-3 col-md-6 card mx-5 my-5">
             <Link to="/calon1">
+              <div className="imgBx">
+                <img
+                  src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                  alt="images"
+                />
+              </div>
+              <div className="details">
+                <h2>Calon 1</h2>
+                <span>
+                  <h2>Kontolodon</h2>
+                </span>
+              </div>
+            </Link>
+          </div>
+          <div className="col-lg-3 col-md-6 card mx-5 my-5">
+            <Link to="/calon2">
               <div className="imgBx">
                 <img
                   src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
