@@ -11,16 +11,17 @@ export default function Navbar() {
     window.onscroll = () => scrollFunction();
 
     const scrollFunction = () => {
-        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 80) {
             setScrolled(true)
         } else {
             setScrolled(false)
         }
     }
+
     return (
         <div className={scrolled ? 'nav-container active-scroll' : 'nav-container'}>
             <div className='nav-logo'>
-                PEMILU KMTK
+                PEMILU KMTK 2021
             </div>
             <div className='nav-menu'>
                 <Link className='menu' to="/">Home</Link>

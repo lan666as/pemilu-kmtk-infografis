@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 .nav-container {
   position: fixed;
   display: flex;
@@ -34,17 +36,19 @@
 }
 
 .nav-logo {
+  font-family: "Roboto";
+  color: #837f5f;
   position: realtive;
   display: flex;
   align-items: center;
-  margin-left: 50px;
+  margin-left: 100px;
 }
 
 .nav-menu {
   display: flex;
   list-style: none;
   align-items: center;
-  margin-right: 50px;
+  margin-right: 100px;
 }
 
 .logo {
