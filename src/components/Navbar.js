@@ -38,7 +38,7 @@ export default function Navbar() {
     // </div>
     <nav class="navbar sticky-top navbar-expand-lg navbar-light inactive">
       <div class="container-fluid">
-        <Link className="navbar-brand" to="/#home">
+        <Link className="navbar-brand" to="/#">
           PEMILU KMTK 2021
         </Link>
         <button
