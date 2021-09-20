@@ -1,6 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+.inactive {
+  background-color: #fcf2e3;
+  font-family: "Roboto";
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
-.nav-container {
+.navbar-brand {
+  color: #837f5f !important;
+}
+
+.nav-item {
+  padding-left: 1em !important;
+  padding-right: 1em !important;
+  text-decoration: none;
+  color: #837f5f;
+  padding: 0.3rem 0.6rem 0.3rem 0.6rem;
+  border-radius: 1rem;
+  font-size: 1em;
+}
+
+.nav-item:hover {
+  background-color: rgba(252, 242, 227, 0.6);
+  background-color: #ff755f;
+  color: #fcf2e3;
+}
+
+/* .nav-container {
   position: fixed;
   display: flex;
   width: 100%;
@@ -30,7 +54,7 @@
 }
 
 .nav-menu a:hover {
-  /* background-color: rgba(252, 242, 227, 0.6); */
+  background-color: rgba(252, 242, 227, 0.6);
   background-color: #ff755f;
   color: #fcf2e3;
 }
@@ -59,4 +83,4 @@
 .menu {
   margin-left: 30px;
   font-size: 1.2rem;
-}
+} */

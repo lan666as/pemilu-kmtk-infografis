@@ -1,26 +1,17 @@
-.footer-container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #414045;
-    height: 100px;
-    color: #ffffff;
+.footer-container {
+  background-color: #31343a;
+  color: #ffffff;
 }
 
-.image-wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffffff;
-    border-radius: 30px;
-    width: 180px;
-    margin-left: 100px;
+.image-wrapper {
+  background-color: #ffffff;
+  border-radius: 30px;
 }
 
-.official-account{
-    margin-right: 100px;
+.social-media {
+  width: 30px;
 }
 
-.social-media{
-    width: 24px
+.logo {
+  height: 60px;
 }

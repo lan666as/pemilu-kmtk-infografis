@@ -1,47 +1,48 @@
-.detail-container{
-    min-height: 100vh;
+.detail-container {
+  min-height: 100vh;
 }
 
-.detail-header{
-    display: flex;
-    align-items: center;
+.detail-header {
+  display: flex;
+  align-items: center;
 }
 
-.detail-info{
-    background-color: #fcf2e3;
-    padding: 70px 100px;
-    padding-bottom: 0;
+.detail-info {
+  background-color: #fcf2e3;
+  padding: 70px 100px;
+  padding-bottom: 0;
 }
 
-.calon-photo{
-    width: 200px;
+.calon-photo {
+  width: 200px;
 }
 
-.visi-misi{
-    margin-left: 50px;
+.visi-misi {
+  margin-left: 50px;
 }
-h1, h2{
-    display: flex;
-    justify-content: center;
-    color: #837F5F;
-    font-family: Agrandir Grand Heavyy;
-    font-size: 2rem;
-    margin: 0;
-    margin-bottom: 10px;
-}
-
-h1{
-    color: #000000;
-    font-size: 2.5rem;
+h1,
+h2 {
+  display: flex;
+  justify-content: center;
+  color: #837f5f;
+  font-family: Agrandir Grand Heavyy;
+  font-size: 2rem;
+  margin: 0;
+  margin-bottom: 10px;
 }
 
-.calon-name{
-    justify-content: left;
-    padding-top: 20px;
-    padding-bottom: 10px;
+h1 {
+  color: #000000;
+  font-size: 2.5rem;
 }
 
-.calon-video{
-    margin: 50px 0;
-    padding: 0 100px;
+.calon-name {
+  justify-content: left;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.calon-video {
+  margin: 50px 0;
+  padding: 0 100px;
 }
