@@ -58,7 +58,7 @@ export default function Navbar() {
         >
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">
+              <a class="nav-link" aria-current="page" href="/#">
                 Home
               </a>
             </li>
