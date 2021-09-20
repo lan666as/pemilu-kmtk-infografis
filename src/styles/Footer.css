@@ -3,6 +3,11 @@
   color: #ffffff;
 }
 
+.official-account {
+  font-family: "Roboto";
+  font-weight: 100;
+}
+
 .image-wrapper {
   background-color: #ffffff;
   border-radius: 30px;

@@ -19,7 +19,7 @@ export default function Footer() {
         </div>
         <div className="col-md-6 col-12 d-flex justify-content-center justify-content-md-end order-1 order-md-2 my-2">
           <div className="official-account">
-            official account :
+            official account
             <div className="official-account">
               <a href="https://instagram.com/kmtkftugm">
                 <img className="social-media" src={instagram}></img>
